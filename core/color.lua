@@ -1,4 +1,9 @@
 -- Converts HSL to RGB. (input and output range: 0 - 1)
+--- func desc
+---@param h integer The hue, between 0 and 360
+---@param s integer the saturation, between 0 and 100
+---@param l integer The luminosity, between 0 and 100
+---@param a integer alpha
 function HSL(h, s, l, a)
     if s <= 0 then return l, l, l, a end
     h, s, l = h * 6, s, l
@@ -22,5 +27,13 @@ function HSL(h, s, l, a)
 end
 
 return {
-    HSL,
+    HSL = HSL,
+    toTable = function(r, g, b, a)
+        return {
+            r = r or 0,
+            g = g or 0,
+            b = b or 0,
+            a = a or 1,
+        }
+    end
 }
