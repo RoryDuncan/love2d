@@ -3,9 +3,8 @@
 ```sh
 .
 ├── README.md
-├── core
-│   ├── color.lua 
-│   └── scene.lua 
-├── main.lua
-└── scenes
+├── core - things that are able to be copied across games
+├── game - things related to this specific game
+├── main.lua - entrypoint for love2d
+└── scenes - scenes of this game
 ```
