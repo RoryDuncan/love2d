@@ -1,3 +1,9 @@
+# README
+
+1. Install lua and love
+2. Run `love .` from within the root of the directory, or `love ./path/to/main.lua`
+
+
 ## Architecture
 
 ```sh
